@@ -1,0 +1,14 @@
+<service
+    android:name=".UniversalCopyService"
+    android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+    android:label="My Universal Copy"
+    android:exported="true">
+    
+    <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService" />
+    </intent-filter>
+    
+    <meta-data
+        android:name="android.accessibilityservice"
+        android:resource="@xml/service_config" />
+</service>
